@@ -3,14 +3,13 @@
   margin: auto;
   text-align: center;
   padding: 4rem 0;
-  
 
   h2 {
     margin-bottom: 2rem;
   }
 
   .projects {
-    ul {
+    .laptop-list {
       display: flex;
       justify-content: space-evenly;
       margin-bottom: 2rem;
@@ -31,6 +30,14 @@
         color: $dark;
         border-bottom: 2px solid $dark;
       }
+    }
+
+    .tab {
+      display: none;
+    }
+
+    .mobile {
+      display: none;
     }
 
     .workboxes {

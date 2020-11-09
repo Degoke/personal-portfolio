@@ -2,39 +2,58 @@
   body {
     font-size: 16px;
 
-    .home {
-      .innerhome {
-        padding-top: 4rem;
-
-        h1 {
-          font-size: 70px;
+    .wrapper {
+      .navbar {
+        .inner-nav {
+          .navlist {
+            display: none;
+          }
+          .mobile-nav {
+            display: inline-block;
+          }
         }
       }
-    }
 
-    .about {
-      .hi {
-        width: 80%;
+      .home {
+        .innerhome {
+          padding-top: 4rem;
+
+          h1 {
+            font-size: 70px;
+          }
+        }
       }
 
-      .lower-about {
+      .about {
+        .hi {
+          width: 80%;
+        }
+
+        .lower-about {
+          width: 90%;
+        }
+      }
+
+      .works {
+        .projects {
+          .laptop-list {
+            display: none;
+          }
+          .mobile {
+            display: flex;
+          }
+          .workboxes {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+
+      .contact {
         width: 90%;
-      }
-    }
 
-    .works {
-      .projects {
-        .workboxes {
-          grid-template-columns: 1fr;
+        p {
+          width: 100%;
         }
-      }
-    }
-
-    .contact {
-      width: 90%;
-
-      p {
-        width: 100%;
       }
     }
   }

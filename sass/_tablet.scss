@@ -64,7 +64,17 @@
 
     .works {
       .projects {
-        flex-wrap: wrap;
+        .laptop-list {
+          display: none;
+        }
+
+        .tab {
+          display: flex;
+        }
+
+        .mobile {
+          display: none;
+        }
 
         .workboxes {
           grid-template-columns: 1fr 1fr;

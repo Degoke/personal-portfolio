@@ -5,7 +5,6 @@
   width: 100%;
   background: $dark;
   z-index: 10;
-  
 
   img {
     width: 2rem;
@@ -41,7 +40,7 @@
     .navlist {
       display: flex;
       justify-content: space-around;
-      padding: 0.5rem 0;
+      
 
       a {
         padding: 0.5rem;
@@ -51,11 +50,47 @@
           border-bottom: 2px solid $light;
         }
 
+        &:active{
+          background: white;
+                        color: $light;
+        }
       }
 
       li {
         margin-left: 1.5rem;
+        display: flex;
       }
+    }
+
+    .mobile-nav {
+      display: none;
+      
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .mobile {
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+    }
+
+    .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .bar2 {
+      opacity: 0;
+    }
+
+    .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-8px, -8px);
     }
   }
 }

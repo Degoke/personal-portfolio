@@ -28,7 +28,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
 
         .hire {
           padding: 0.7rem 1rem;
@@ -44,28 +43,28 @@
           &:hover {
             background: white;
             color: $dark;
-            
+
             cursor: pointer;
           }
         }
 
         .cv {
-            padding: 0.7rem 1rem;
-            border: none;
-            background: white;
-            color: $dark;
-            width: 30%;
-            height: 2.5rem;
-            outline: none;
-            margin: 0 0.5rem;
-            border: 0.2px solid $dark;
-  
-            &:hover {
-              background: $light;
-              color: white;
-              
-              cursor: pointer;
-            }
+          padding: 0.7rem 1rem;
+          border: none;
+          background: white;
+          color: $dark;
+          width: 30%;
+          height: 2.5rem;
+          outline: none;
+          margin: 0 0.5rem;
+          border: 0.2px solid $dark;
+
+          &:hover {
+            background: $light;
+            color: white;
+
+            cursor: pointer;
+          }
         }
       }
     }
@@ -73,8 +72,8 @@
     .home-image {
       flex: 55%;
 
-      &:hover{
-          transform: rotateY(180deg);
+      &:hover {
+        transform: rotateY(180deg);
       }
     }
   }

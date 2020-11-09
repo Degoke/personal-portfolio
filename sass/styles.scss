@@ -25,6 +25,42 @@ body {
   li {
     list-style: none;
   }
+
+  .wrapper {
+    position: relative;
+
+    .mobile-navlist {
+      background: $mid;
+      margin: auto;
+      width: 100%;
+      display: none;
+      text-align: center;
+      top: 3rem;
+      right: 0;
+      position: fixed;
+
+      ul {
+        li {
+          display: flex;
+
+          a {
+            color: white;
+            padding: 0.5rem 0;
+
+            width: 100%;
+
+            &:hover {
+              background: white;
+              color: $light;
+            }
+          }
+        }
+      }
+    }
+    .show {
+      display: block;
+    }
+  }
 }
 
 @import "nav";

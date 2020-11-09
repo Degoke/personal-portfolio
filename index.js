@@ -25,3 +25,16 @@ $(".form").on("submit", function (event) {
       });
     });
 });
+
+function myFunction(x) {
+  x.classList.toggle("change");
+  $(".mobile-navlist").toggleClass("show");
+}
+
+$(".mobile-navlist")
+  .find("li")
+  .children("a")
+  .click(function () {
+    $(".mobile-navlist").removeClass("show");
+    $(".mobile-nav").removeClass("change");
+  });
