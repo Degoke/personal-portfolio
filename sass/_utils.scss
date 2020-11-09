@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&family=Megrim&family=Roboto&family=Special+Elite&display=swap");
+
+$light: #6b63fa;
+$dark: #141d26;
+$mid: #243447;
+
+$roboto: "Roboto", sans-serif;
+$megrim: "Megrim", cursive;
+$markscript: "Marck Script", cursive;
+
+%input {
+  width: 100%;
+  outline: none;
+  font-size: inherit;
+  padding: 0.7rem;
+  border: 0.1px solid $dark;
+  color: inherit;
+  border-bottom: none;
+
+  &::placeholder {
+    color: $dark;
+  }
+
+  &:focus {
+    border: 1px solid $light;
+    color: $light;
+
+    &::placeholder {
+      color: $light;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.attribution {
+  text-align: center;
+  color: white;
+  background: $dark;
+  padding: 0.5rem 0;
+
+  p {
+    margin-top: 0.5rem;
+  }
+
+  .icon {
+    background-color: $dark;
+    color: white;
+    margin: 0 0.5rem;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

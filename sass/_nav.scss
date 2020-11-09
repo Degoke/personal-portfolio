@@ -1,0 +1,61 @@
+.navbar {
+  background: inherit;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $dark;
+  z-index: 10;
+  
+
+  img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  .inner-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    opacity: 0.9;
+
+    .name {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 0;
+
+      &:hover {
+        transform: translateY(-0.3rem);
+      }
+
+      p {
+        font-family: $megrim;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+      }
+    }
+
+    .navlist {
+      display: flex;
+      justify-content: space-around;
+      padding: 0.5rem 0;
+
+      a {
+        padding: 0.5rem;
+        color: white;
+
+        &:hover {
+          border-bottom: 2px solid $light;
+        }
+
+      }
+
+      li {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}

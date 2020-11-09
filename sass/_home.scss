@@ -1,0 +1,81 @@
+.home {
+  background: $dark;
+  color: white;
+
+  .innerhome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    height: 100vh;
+
+    h1 {
+      font-size: 80px;
+      font-family: $megrim;
+    }
+
+    p {
+      font-size: 30px;
+    }
+
+    .intro {
+      flex: 45%;
+      text-align: center;
+
+      .buttons {
+        margin: 1rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        .hire {
+          padding: 0.7rem 1rem;
+          border: none;
+          background: $light;
+          color: white;
+          width: 30%;
+          height: 2.5rem;
+          outline: none;
+          margin: 0 0.5rem;
+          border: 0.2px solid $dark;
+
+          &:hover {
+            background: white;
+            color: $dark;
+            
+            cursor: pointer;
+          }
+        }
+
+        .cv {
+            padding: 0.7rem 1rem;
+            border: none;
+            background: white;
+            color: $dark;
+            width: 30%;
+            height: 2.5rem;
+            outline: none;
+            margin: 0 0.5rem;
+            border: 0.2px solid $dark;
+  
+            &:hover {
+              background: $light;
+              color: white;
+              
+              cursor: pointer;
+            }
+        }
+      }
+    }
+
+    .home-image {
+      flex: 55%;
+
+      &:hover{
+          transform: rotateY(180deg);
+      }
+    }
+  }
+}

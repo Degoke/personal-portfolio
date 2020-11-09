@@ -1,0 +1,41 @@
+@media all and(max-width: 500px) {
+  body {
+    font-size: 16px;
+
+    .home {
+      .innerhome {
+        padding-top: 4rem;
+
+        h1 {
+          font-size: 70px;
+        }
+      }
+    }
+
+    .about {
+      .hi {
+        width: 80%;
+      }
+
+      .lower-about {
+        width: 90%;
+      }
+    }
+
+    .works {
+      .projects {
+        .workboxes {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+
+    .contact {
+      width: 90%;
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
