@@ -28,14 +28,14 @@ $(".form").on("submit", function (event) {
 
 
 
-$('.mobile-nav').on('click touch', function () {
+$('.mobile-nav').on('click touchend', function () {
   this.classList.toggle("change");
   $(".mobile-navlist").toggleClass("show");
 })
 
 $(".mobile-navlist")
   .find("li")
-  .children("a").on('click touch', function () {
+  .children("a").on('click touchend', function () {
     $(".mobile-navlist").removeClass("show");
     $(".mobile-nav").removeClass("change");
   });
