@@ -1,12 +1,29 @@
-$(".form").on("submit", function (event) {
-  event.preventDefault(); // prevent reload
+var regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+var validated = false
 
+$('#email').on("input", function (event) {
+if (!regex.test(event.target.value)){
+  $('.error').css("display", "block");
+  $('#email').css({ "border": "0.1px solid hsl(0, 100%, 74%)", "color": "hsl(0, 100%, 74%)" })
+  }
+else {
+  $('.error').css("display", "none")
+  $('#email').css({ "border": "0.1px solid #141d26", "color": "#141d26" })
+  validated = true
+  }
+})
+
+$(".form").on("submit", function (event) {
+  event.preventDefault(); 
+
+  
   var formData = new FormData(this);
   formData.append("service_id", "service_ibq7bhi");
   formData.append("template_id", "template_likkl0t");
   formData.append("user_id", "user_YnxNO7mW1obMdVQjSXTGD");
 
-  $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
+  if (validated) {
+    $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
     type: "POST",
     data: formData,
     contentType: false,
@@ -24,7 +41,17 @@ $(".form").on("submit", function (event) {
         button: "Try again",
       });
     });
+  }
+  else {
+    swal("could not send mail", "please fill the form correctly", "error", {
+      button: "Try again",
+    });
+  }
+
+  
 });
+
+
 
 
 
@@ -40,42 +67,61 @@ $(".mobile-navlist")
     $(".mobile-nav").removeClass("change");
   });
 
-$('.css, .vanillajs, .jquery, .d3, .react, .node, .frontend, .backend').on('click', function () {
+function showBoxes(group) {
+  $('.workboxes').children('div').filter(group).addClass('hit');
+}
+
+function hideBoxes() {
+  $('.hit').removeClass('hit');
+  
+}
+
+$(document).ready(function () {
+  $('.hit').addClass('temporary');
+})
+
+$('.css, .vanillajs, .j-query, .d3js, .react-redux, .nodejs, .frontend, .backend, .hot').on('click', function () {
   $('.active').removeClass('active');
+  hideBoxes()
   this.classList.add('active');
 
   switch (this.classList[0]) {
     case "css":
-      $('.show-work').removeClass('show-work');
-      $('.workboxes').children('div').filter('.html').addClass('show-work');
+      hideBoxes();
+      showBoxes('.html');
+      
       break
     case "vanillajs":
-      $('.show-work').removeClass('show-work');
-      $('.workboxes').children('div').filter('.javascript').addClass('show-work');
+      hideBoxes();
+      showBoxes('.javascript');
       break
-    case "jquery":
-      $('.show-work').removeClass('show-work');
-      $('.workboxes').children('div').filter('.jquery').addClass('show-work');
+    case "j-query":
+      hideBoxes();
+      showBoxes('.jquery');
       break
-    case "d3":
-      $('.show-work').removeClass('show-work');
-      $('.workboxes').children('div').filter('.d3').addClass('show-work');
+    case "d3js":
+      hideBoxes();
+      showBoxes('.d3');
       break
-    case "react":
-      $('.show-work').removeClass('show-work');
-      $('.workboxes').children('div').filter('.react').addClass('show-work');
+    case "react-redux":
+      hideBoxes();
+      showBoxes('.react');
       break
-    case "node":
-      $('.show-work').removeClass('show-work');
-      $('.workboxes').children('div').filter('.node').addClass('show-work');
+    case "nodejs":
+      hideBoxes();
+      showBoxes('.node');
       break
     case "frontend":
-      $('.show-work').removeClass('show-work');
-      $('.workboxes').children('div').filter('.html, .javascript, .jquery, .react').addClass('show-work');
+      hideBoxes();
+      showBoxes('.html, .javascript, .jquery, .react');
       break
     case "backend":
-      $('.show-work').removeClass('show-work');
-      $('.workboxes').children('div').filter('.node').addClass('show-work');
+      hideBoxes();
+      showBoxes('.node');
+      break
+    case 'hot':
+      hideBoxes();
+      showBoxes('.temporary');
       break;
   }
   
@@ -85,3 +131,7 @@ $('.css, .vanillajs, .jquery, .d3, .react, .node, .frontend, .backend').on('clic
 $('.hire').click(function(){
   window.location = '#contact'
 })
+
+/*$('.cv').click(function(){
+  window.open('files/test.docx')
+})*/

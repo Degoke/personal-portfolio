@@ -1,101 +1,31 @@
-@media all and (max-width: 800px) {
-  body {
-    font-size: 18px;
-
-    .home {
-      .innerhome {
-        flex-direction: column-reverse;
-        width: 90%;
-        height: 70%;
-
-       
-        h1 {
-          font-size: 80px;
+@media all and(max-width: 800px){
+    .home{
+        .innerhome{
+            flex-direction: column-reverse;
         }
+    }
 
-        p {
-          font-size: 20px;
-        }
-
-        .intro {
-          .buttons {
-            .hire {
-              width: 100%;
-              padding: 0.7rem 0.5rem;
+    .about{
+        .lower-about{
+            .skillboxes{
+                grid-template-columns: 1fr 1fr 1fr;;
             }
+        }
+    }
 
-            .cv {
-              width: 100%;
-              padding: 0.7rem 0.5rem;
+    .works{
+        .projects{
+            .laptop-list {
+                display: none;
+              }
+      
+              .mobile {
+                display: flex;
+              }
+
+            .workboxes{
+                grid-template-columns: 1fr 1fr;
             }
-          }
         }
-
-      }
     }
-
-    .about {
-      .hi {
-        width: 70%;
-        padding: 1rem;
-        
-      }
-
-      .lower-about {
-        width: 85%;
-        flex-direction: column;
-
-        .skill {
-          margin: 0;
-          flex: 40%;
-
-          .skillboxes {
-            grid-template-columns: 1fr 1fr 1fr;
-
-            img {
-              width: 3rem;
-              height: 3rem;
-            }
-          }
-        }
-
-        .skill-image {
-          display: none;
-        }
-      }
-    }
-
-    .works {
-      .projects {
-        .laptop-list {
-          display: none;
-        }
-
-        .mobile {
-          display: flex;
-        }
-
-        .workboxes {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-    }
-
-    .contact {
-      width: 85%;
-
-      p {
-        width: 80%;
-      }
-
-      .inner-contact {
-        .form {
-          margin: 0;
-        }
-        .contactimage {
-          display: none;
-        }
-      }
-    }
-  }
 }

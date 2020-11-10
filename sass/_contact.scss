@@ -27,6 +27,29 @@
 
       #email {
         @extend %input;
+
+        
+      }
+
+      .error{
+        text-align: end;
+        margin: 0.2rem 0 0.5rem;
+        display: none;
+        
+        
+        img{
+          width: 1rem;
+          height: 1rem;
+          margin: -2.1rem 2rem 0 0;
+          
+        }
+
+        p{
+          font-size: 14px;
+          color: hsl(0, 100%, 74%);
+          width: 90%;
+          
+        }
       }
 
       #subject {
@@ -36,6 +59,8 @@
       #text {
         @extend %input;
       }
+
+      
 
       #submit {
         padding: 0.7rem 1rem;
