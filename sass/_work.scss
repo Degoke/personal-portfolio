@@ -8,7 +8,7 @@
     margin-bottom: 2rem;
   }
 
-  p{
+  p {
     margin-bottom: 0.5rem;
   }
 
@@ -19,7 +19,6 @@
       margin: auto;
       margin-bottom: 2rem;
       width: 90%;
-      
 
       li {
         padding: 0.5rem;
@@ -30,6 +29,7 @@
           color: $light;
           border-bottom: 2px solid $light;
           cursor: pointer;
+          transition: all 0.4s;
         }
       }
 
@@ -38,7 +38,6 @@
         border-bottom: none;
       }
     }
-
 
     .mobile {
       display: none;
@@ -66,16 +65,17 @@
           box-shadow: 0px 6px 20px 0px rgba(59, 58, 82, 0.43);
           transform: translateY(-0.5rem);
           border-bottom: 10px solid $light;
-          
+          transition: all 0.4s;
         }
 
-        &:hover .description .tail{
+        &:hover .description .tail {
           display: block;
+          transition: all 0.4s;
         }
 
-        &:hover .icons i{
+        &:hover .icons i {
           color: $light;
-         
+          transition: all 0.4s;
         }
 
         .icons {
@@ -84,28 +84,24 @@
           i {
             margin: 0 0.5rem;
             color: $dark;
-
-           
           }
         }
 
-        .description{
-          .head{
+        .description {
+          .head {
             color: $dark;
             font-weight: bold;
             margin-bottom: 0.5rem;
-        
           }
 
-          .tail{
+          .tail {
             font-size: 14px;
             display: none;
           }
         }
-
       }
 
-      .hit{
+      .hit {
         display: flex;
       }
     }

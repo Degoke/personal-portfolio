@@ -27,6 +27,7 @@
 
       &:hover {
         transform: translateY(-0.3rem);
+        transition: all .5s;
       }
 
       p {
@@ -47,6 +48,7 @@
 
         &:hover {
           border-bottom: 2px solid $light;
+          transition: all 0.4s;
         }
 
         &:active {

@@ -46,7 +46,7 @@
           &:hover {
             background: white;
             color: $dark;
-
+            transition: all 0.4s;
             cursor: pointer;
           }
         }
@@ -65,6 +65,7 @@
           &:hover {
             background: $light;
             color: white;
+            transition: all 0.4s;
 
             cursor: pointer;
           }
@@ -77,6 +78,7 @@
 
       &:hover {
         transform: rotateY(180deg);
+        transition: all 0.4s;
       }
     }
   }

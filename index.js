@@ -1,22 +1,23 @@
 var regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-var validated = false
+var validated = false;
 
-$('#email').on("input", function (event) {
-if (!regex.test(event.target.value)){
-  $('.error').css("display", "block");
-  $('#email').css({ "border": "0.1px solid hsl(0, 100%, 74%)", "color": "hsl(0, 100%, 74%)" })
+$("#email").on("input", function (event) {
+  if (!regex.test(event.target.value)) {
+    $(".error").css("display", "block");
+    $("#email").css({
+      border: "0.1px solid hsl(0, 100%, 74%)",
+      color: "hsl(0, 100%, 74%)",
+    });
+  } else {
+    $(".error").css("display", "none");
+    $("#email").css({ border: "0.1px solid #141d26", color: "#141d26" });
+    validated = true;
   }
-else {
-  $('.error').css("display", "none")
-  $('#email').css({ "border": "0.1px solid #141d26", "color": "#141d26" })
-  validated = true
-  }
-})
+});
 
 $(".form").on("submit", function (event) {
-  event.preventDefault(); 
+  event.preventDefault();
 
-  
   var formData = new FormData(this);
   formData.append("service_id", "service_ibq7bhi");
   formData.append("template_id", "template_likkl0t");
@@ -24,113 +25,106 @@ $(".form").on("submit", function (event) {
 
   if (validated) {
     $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
-    type: "POST",
-    data: formData,
-    contentType: false,
-    processData: false,
-  })
-    .done(function () {
-      swal(
-        "Your mail is sent!",
-        "You'll get a reply as soon as possible",
-        "success"
-      );
+      type: "POST",
+      data: formData,
+      contentType: false,
+      processData: false,
     })
-    .fail(function () {
-      swal("Oops...!", "could not send mail", "error", {
-        button: "Try again",
+      .done(function () {
+        swal(
+          "Your mail is sent!",
+          "You'll get a reply as soon as possible",
+          "success"
+        );
+      })
+      .fail(function () {
+        swal("Oops...!", "could not send mail", "error", {
+          button: "Try again",
+        });
       });
-    });
-  }
-  else {
+  } else {
     swal("could not send mail", "please fill the form correctly", "error", {
       button: "Try again",
     });
   }
-
-  
 });
 
-
-
-
-
-$('.mobile-nav').on('click', function () {
+$(".mobile-nav").on("click", function () {
   this.classList.toggle("change");
   $(".mobile-navlist").toggleClass("show");
-})
+});
 
 $(".mobile-navlist")
   .find("li")
-  .children("a").on('click', function () {
+  .children("a")
+  .on("click", function () {
     $(".mobile-navlist").removeClass("show");
     $(".mobile-nav").removeClass("change");
   });
 
 function showBoxes(group) {
-  $('.workboxes').children('div').filter(group).addClass('hit');
+  $(".workboxes").children("div").filter(group).addClass("hit");
 }
 
 function hideBoxes() {
-  $('.hit').removeClass('hit');
-  
+  $(".hit").removeClass("hit");
 }
 
 $(document).ready(function () {
-  $('.hit').addClass('temporary');
-})
+  $(".hit").addClass("temporary");
+});
 
-$('.css, .vanillajs, .j-query, .d3js, .react-redux, .nodejs, .frontend, .backend, .hot').on('click', function () {
-  $('.active').removeClass('active');
-  hideBoxes()
-  this.classList.add('active');
+$(
+  ".css, .vanillajs, .j-query, .d3js, .react-redux, .nodejs, .frontend, .backend, .hot"
+).on("click", function () {
+  $(".active").removeClass("active");
+  hideBoxes();
+  this.classList.add("active");
 
   switch (this.classList[0]) {
     case "css":
       hideBoxes();
-      showBoxes('.html');
-      
-      break
+      showBoxes(".html");
+
+      break;
     case "vanillajs":
       hideBoxes();
-      showBoxes('.javascript');
-      break
+      showBoxes(".javascript");
+      break;
     case "j-query":
       hideBoxes();
-      showBoxes('.jquery');
-      break
+      showBoxes(".jquery");
+      break;
     case "d3js":
       hideBoxes();
-      showBoxes('.d3');
-      break
+      showBoxes(".d3");
+      break;
     case "react-redux":
       hideBoxes();
-      showBoxes('.react');
-      break
+      showBoxes(".react");
+      break;
     case "nodejs":
       hideBoxes();
-      showBoxes('.node');
-      break
+      showBoxes(".node");
+      break;
     case "frontend":
       hideBoxes();
-      showBoxes('.html, .javascript, .jquery, .react');
-      break
+      showBoxes(".html, .javascript, .jquery, .react");
+      break;
     case "backend":
       hideBoxes();
-      showBoxes('.node');
-      break
-    case 'hot':
+      showBoxes(".node");
+      break;
+    case "hot":
       hideBoxes();
-      showBoxes('.temporary');
+      showBoxes(".temporary");
       break;
   }
-  
+});
 
-})
-
-$('.hire').click(function(){
-  window.location = '#contact'
-})
+$(".hire").click(function () {
+  window.location = "#contact";
+});
 
 /*$('.cv').click(function(){
   window.open('files/test.docx')
