@@ -5,9 +5,10 @@
     .home {
       .innerhome {
         flex-direction: column-reverse;
-        justify-items: center;
         width: 90%;
-        padding-top: 6rem;
+        height: 70%;
+
+       
         h1 {
           font-size: 80px;
         }
@@ -29,6 +30,7 @@
             }
           }
         }
+
       }
     }
 
@@ -36,6 +38,7 @@
       .hi {
         width: 70%;
         padding: 1rem;
+        
       }
 
       .lower-about {
@@ -68,12 +71,8 @@
           display: none;
         }
 
-        .tab {
-          display: flex;
-        }
-
         .mobile {
-          display: none;
+          display: flex;
         }
 
         .workboxes {

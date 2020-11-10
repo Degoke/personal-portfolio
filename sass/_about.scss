@@ -2,21 +2,32 @@
   padding: 4rem 0;
 
   .hi {
-    width: 40%;
+    width: 50%;
     background: $dark;
     color: white;
     margin: auto;
     text-align: center;
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    padding: 2rem 5rem;
+    padding: 2rem 5rem 1rem;
     box-shadow: 0px 4px 10px 0px rgba(59, 58, 82, 0.43);
 
     .social {
       margin-top: 1rem;
+      display: flex;
+      justify-content: center;
 
       a {
         margin: 0 0.5rem;
+
+        &:hover p{
+          visibility: visible;
+        }
+
+        p{
+          visibility: hidden;
+          color: white;
+        }
       }
 
       .icon {
@@ -24,7 +35,7 @@
         color: white;
 
         &:hover {
-          transform: scale(1.2);
+          transform: scale(1.2) translateY(-0.5rem);
         }
       }
     }

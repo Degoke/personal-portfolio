@@ -40,7 +40,6 @@
     .navlist {
       display: flex;
       justify-content: space-around;
-      
 
       a {
         padding: 0.5rem;
@@ -50,9 +49,9 @@
           border-bottom: 2px solid $light;
         }
 
-        &:active{
+        &:active {
           background: white;
-                        color: $light;
+          color: $light;
         }
       }
 
@@ -64,7 +63,6 @@
 
     .mobile-nav {
       display: none;
-      
 
       &:hover {
         cursor: pointer;

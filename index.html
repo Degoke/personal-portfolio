@@ -2,6 +2,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg"
+      sizes="32x32"
+      href="images/svgs/undraw_profile_pic_ic5t.svg"
+    />
     <title>Degoke</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link
@@ -44,7 +50,7 @@
             <p>Fullstack web developer</p>
             <div class="buttons">
               <button class="hire">Hire me</button>
-              <button class="cv">My Resume</button>
+              <button class="cv">Resume</button>
             </div>
           </section>
           <div class="home-image">
@@ -56,12 +62,7 @@
         </div>
       </div>
       <div class="about" id="about">
-        <section
-          class="hi"
-          data-aos="fade-up"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
-        >
+        <section class="hi" data-aos="fade-up" data-aos-easing="ease-in-sine">
           <img
             src="images/svgs/undraw_profile_pic_ic5t.svg"
             alt="undraw_profile_pic_ic5t"
@@ -70,24 +71,37 @@
           <h2>Hi</h2>
           <p>
             I'm Adewoye Adegoke a fullstack web developer based in lagos
-            Nigeria. i have a passion for building things. i would love to bring
-            your designs and ideas to life.
+            Nigeria. i have a passion for building things and would love to
+            bring your designs and ideas to life.
           </p>
           <div class="social">
-            <a href=""><i class="fab fa-github fa-2x icon"></i></a>
-            <a href=""><i class="fab fa-linkedin-in fa-2x icon"></i></a>
-            <a href=""><i class="fab fa-codepen fa-2x icon"></i></a>
-            <a href=""><i class="fab fa-twitter fa-2x icon"></i></a>
+            <a href="https://github.com/Degoke" target="_blank"
+              ><i class="fab fa-github fa-2x icon"></i>
+              <p>Github</p></a
+            >
+            <a
+              href="https://www.linkedin.com/in/degoke-adewoye-6a20351b1/"
+              target="_blank"
+              ><i class="fab fa-linkedin-in fa-2x icon"></i>
+              <p>Linkedin</p></a
+            >
+            <a href="https://codepen.io/degoke" target="_blank"
+              ><i class="fab fa-codepen fa-2x icon"></i>
+              <p>Codepen</p></a
+            >
+            <a href="https://twitter.com/de_goke" target="_blank"
+              ><i class="fab fa-twitter fa-2x icon"></i>
+              <p>Twitter</p></a
+            >
           </div>
         </section>
         <div
           class="lower-about"
           data-aos="fade-up"
-          data-aos-offset="300"
           data-aos-easing="ease-in-sine"
         >
           <section class="skill">
-            <h2>i have experience working with...</h2>
+            <h2>Experience working with...</h2>
             <div class="skillboxes">
               <div class="skillbox">
                 <img src="images/svgs/html5-icon.svg" alt="html5-icon" />
@@ -126,68 +140,340 @@
           </div>
         </div>
       </div>
-      <section class="works" id="works">
+      <div
+        class="works"
+        id="works"
+        data-aos="fade-up"
+        data-aos-easing="ease-in-sine"
+      >
         <h2>My Projects</h2>
+        <p>Select category to view more...</p>
         <div class="projects">
           <ul class="laptop-list">
             <li class="hot active">Spotlight</li>
-            <li class="css">HTML/css/sass</li>
-            <li class="vanillajs">Vanilla js</li>
-            <li class="jquery">j-query</li>
-            <li class="d3">d3,js</li>
-            <li class="react">React/Rrdux</li>
+            <li class="css">HTML/Css/Sass</li>
+            <li class="vanillajs">Vanilla Js</li>
+            <li class="jquery">J-query</li>
+            <li class="d3">d3.js</li>
+            <li class="react">React/Redux</li>
             <li class="node">Node/MongoDB</li>
-          </ul>
-          <ul class="laptop-list tab">
-            <li class="hot active">Spotlight</li>
-            <li class="css">HTML/css/sass</li>
-            <li class="vanillajs">Frontend Frameworks</li>
-            <li class="jquery">Backend & API's</li>
           </ul>
           <ul class="laptop-list mobile">
             <li class="hot active">Spotlight</li>
-            <li class="vanillajs">Frontend</li>
-            <li class="jquery">Backend & API's</li>
+            <li class="frontend">Frontend</li>
+            <li class="backend">Backend & API's</li>
           </ul>
           <div class="workboxes">
-            <div class="workbox">
+            <div class="workbox html" id="four-card">
               <div class="icons">
-                <a href=""><i class="fab fa-github"></i></a>
-                <a href=""><i class="fas fa-external-link-alt"></i></a>
-              </div>
-              <div class="workimage">
-                <img
-                  src="images/work/four-card-feature.jpg"
-                  alt="four-card-feature"
-                />
+                <a
+                  href="https://github.com/Degoke/four-card-feature-section"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://four-card-feature-section-gold-seven.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
               </div>
               <div class="description">
-                <h3>Four card feature section</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Sapiente maxime incidunt voluptate architecto iure pariatur
-                  voluptatum minima obcaecati consectetur nam!
+                <p class="head">Four card feature section</p>
+                <p class="tail">
+                  Responsive mobile first four card feature section with html
+                  and sass
                 </p>
               </div>
             </div>
-            <div class="workbox">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum,
-              placeat.
+            <!-- End of box-->
+            <div class="workbox jquery" id="personal-portfolio">
+              <div class="icons">
+                <a
+                  href="https://github.com/Degoke/personal-portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://degoke.github.io/personal-portfolio/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+              <div class="description">
+                <p class="head">My portfolio Website</p>
+                <p class="tail">Responsive with html sass and jquery</p>
+              </div>
             </div>
-            <div class="workbox">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium, consectetur.
+            <!-- End of box-->
+            <div class="workbox javascript" id="ping-coming-soon">
+              <div class="icons">
+                <a
+                  href="https://github.com/Degoke/ping-coming-soon-page"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://ping-coming-soon-page-degoke.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+              <div class="description">
+                <p class="head">Ping coming soon page</p>
+                <p class="tail">
+                  coming soon page, mobile first responsive with html sass and
+                  vanilla js
+                </p>
+              </div>
             </div>
+            <!-- End of box-->
+            <div class="workbox html" id="huddle-landing-page">
+              <div class="icons">
+                <a
+                  href="https://github.com/Degoke/huddle-landing-page-with-single-introductory-section"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://huddle-landing-page-with-single-introductory-section-degoke.vercel.app/http://"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+              <div class="description">
+                <p class="head">Huddle landing page</p>
+                <p class="tail">
+                  Landing page with single introductory section, mobile first,
+                  with html and sass
+                </p>
+              </div>
+            </div>
+            <!-- End of box-->
+            <div class="workbox html" id="four-card">
+              <div class="icons">
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+              <div class="description">
+                <p class="head">Four card feature section</p>
+                <p class="tail">
+                  Responsive mobile first four card feature section with html
+                  and sass
+                </p>
+              </div>
+            </div>
+            <!-- End of box-->
+            <div class="workbox javascript" id="intro-component">
+              <div class="icons">
+                <a
+                  href="https://github.com/Degoke/intro-component-with-signup-form"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="http://intro-component-with-signup-form-degoke.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+              <div class="description">
+                <p class="head">Intro component with signup form</p>
+                <p class="tail">
+                  Intro component with signup form, mobile first responsive with
+                  html sass and vanilla javascript
+                </p>
+              </div>
+            </div>
+            <!-- End of box-->
+            <div class="workbox javascript" id="base-apparel">
+              <div class="icons">
+                <a
+                  href="https://github.com/Degoke/base-apparel-coming-soon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://base-apparel-coming-soon-degoke.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+              <div class="description">
+                <p class="head">Base apparel coming soon page</p>
+                <p class="tail">
+                  base apparel coming soon page responsive mobile first with
+                  html sass and vanilla javascript
+                </p>
+              </div>
+            </div>
+            <!-- End of box-->
+            <div class="workbox html" id="data-storage">
+              <div class="icons">
+                <a
+                  href="https://github.com/Degoke/data-storage-component"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://data-storage-component-eight-steel.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+              <div class="description">
+                <p class="head">Fylo data storage component</p>
+                <p class="tail">
+                  Responsive data storage component ui with html and css
+                </p>
+              </div>
+            </div>
+            <!-- End of box-->
+            <div class="workbox javascript" id="coding-bootcamp">
+              <div class="icons">
+                <a
+                  href="https://github.com/Degoke/coding-bootcamp-testimonials"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://coding-bootcamp-testimonials-eta.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+              <div class="description">
+                <p class="head">Coding bootcamp testimonials</p>
+                <p class="tail">
+                  responsive mobile first coding bootcamp testimonial with
+                  vanilla javascript
+                </p>
+              </div>
+            </div>
+            <!-- End of box-->
+            <div class="workbox javascript" id="article-preview">
+              <div class="icons">
+                <a
+                  href="https://github.com/Degoke/Article-preview--component"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="http://article-preview-component-git-master.degoke.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+              <div class="description">
+                <p class="head">Article preview component</p>
+                <p class="tail">
+                  responsive Article preview component with Html css and vanilla
+                  javascript
+                </p>
+              </div>
+            </div>
+            <!-- End of box-->
+            <div class="workbox html" id="social-proof">
+              <div class="icons">
+                <a
+                  href="https://github.com/Degoke/social-proof-section"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="http://social-proof-section.degoke.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+              <div class="description">
+                <p class="head">Social proof section</p>
+                <p class="tail">Socialproof section with html and css</p>
+              </div>
+            </div>
+            <!-- End of box-->
+            <div class="workbox html" id="single-price">
+              <div class="icons">
+                <a
+                  href="https://github.com/Degoke/single-price-grid-component"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="http://single-price-grid-component-git-master.degoke.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+              <div class="description">
+                <p class="head">Single Price Grid component</p>
+                <p class="tail">
+                  single price grid component with html and css
+                </p>
+              </div>
+            </div>
+            <!-- End of box-->
+            <div class="workbox html" id="faq-accordion">
+              <div class="icons">
+                <a
+                  href="https://github.com/Degoke/faq-accordion-cards"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="http://faq-accordion-card-git-master.degoke.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+              <div class="description">
+                <p class="head">Faq accordion cards</p>
+                <p class="tail">Faq accordion cards with html and css</p>
+              </div>
+            </div>
+            <!-- End of box-->
           </div>
         </div>
-      </section>
-      <section class="contact" id="contact">
+      </div>
+      <div
+        class="contact"
+        id="contact"
+        data-aos="fade-up"
+        data-aos-easing="ease-in-sine"
+      >
         <h2>I'm Available</h2>
         <p>
-          I'm currently available for hire,freelance work and learning
-          opurtunities to improve my skills If you have a project you want to
-          work on together, want to hire me or just feel like saying hi, send me
-          a message.
+          I'm currently available for hire, freelance work and learning
+          oppurtunities to improve my skills. If you have a project you want to
+          work on together, want to hire me or just feel like saying hello, send
+          me a message.
         </p>
         <div class="inner-contact">
           <form action="" class="form">
@@ -220,7 +506,7 @@
               id="text"
               cols="30"
               rows="7"
-              placeholder="Say hi..."
+              placeholder="Say hello..."
             ></textarea
             ><br />
             <input type="submit" value="Send Message" id="submit" />
@@ -232,7 +518,7 @@
             />
           </div>
         </div>
-      </section>
+      </div>
       <div class="mobile-navlist">
         <ul>
           <li><a href="#about">ABOUT</a></li>

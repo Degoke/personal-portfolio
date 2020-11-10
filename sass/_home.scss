@@ -1,14 +1,17 @@
 .home {
   background: $dark;
   color: white;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
 
   .innerhome {
     display: flex;
-    justify-content: space-between;
+    height: 100%;
     align-items: center;
     margin: auto;
     width: 80%;
-    height: 100vh;
 
     h1 {
       font-size: 80px;

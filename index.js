@@ -19,7 +19,7 @@ $(".form").on("submit", function (event) {
         "success"
       );
     })
-    .fail(function (error) {
+    .fail(function () {
       swal("Oops...!", "could not send mail", "error", {
         button: "Try again",
       });
@@ -39,3 +39,49 @@ $(".mobile-navlist")
     $(".mobile-navlist").removeClass("show");
     $(".mobile-nav").removeClass("change");
   });
+
+$('.css, .vanillajs, .jquery, .d3, .react, .node, .frontend, .backend').on('click', function () {
+  $('.active').removeClass('active');
+  this.classList.add('active');
+
+  switch (this.classList[0]) {
+    case "css":
+      $('.show-work').removeClass('show-work');
+      $('.workboxes').children('div').filter('.html').addClass('show-work');
+      break
+    case "vanillajs":
+      $('.show-work').removeClass('show-work');
+      $('.workboxes').children('div').filter('.javascript').addClass('show-work');
+      break
+    case "jquery":
+      $('.show-work').removeClass('show-work');
+      $('.workboxes').children('div').filter('.jquery').addClass('show-work');
+      break
+    case "d3":
+      $('.show-work').removeClass('show-work');
+      $('.workboxes').children('div').filter('.d3').addClass('show-work');
+      break
+    case "react":
+      $('.show-work').removeClass('show-work');
+      $('.workboxes').children('div').filter('.react').addClass('show-work');
+      break
+    case "node":
+      $('.show-work').removeClass('show-work');
+      $('.workboxes').children('div').filter('.node').addClass('show-work');
+      break
+    case "frontend":
+      $('.show-work').removeClass('show-work');
+      $('.workboxes').children('div').filter('.html, .javascript, .jquery, .react').addClass('show-work');
+      break
+    case "backend":
+      $('.show-work').removeClass('show-work');
+      $('.workboxes').children('div').filter('.node').addClass('show-work');
+      break;
+  }
+  
+
+})
+
+$('.hire').click(function(){
+  window.location = '#contact'
+})
