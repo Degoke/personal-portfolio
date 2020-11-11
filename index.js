@@ -74,39 +74,13 @@ $(document).ready(function () {
   $(".hit").addClass("temporary");
 });
 
-$(
-  ".css, .vanillajs, .j-query, .d3js, .react-redux, .nodejs, .frontend, .backend, .hot"
-).on("click", function () {
+$(".frontend, .backend, .hot, .view").on("click", function () {
   $(".active").removeClass("active");
+  $(".view-more").css("display", "none");
   hideBoxes();
   this.classList.add("active");
 
   switch (this.classList[0]) {
-    case "css":
-      hideBoxes();
-      showBoxes(".html");
-
-      break;
-    case "vanillajs":
-      hideBoxes();
-      showBoxes(".javascript");
-      break;
-    case "j-query":
-      hideBoxes();
-      showBoxes(".jquery");
-      break;
-    case "d3js":
-      hideBoxes();
-      showBoxes(".d3");
-      break;
-    case "react-redux":
-      hideBoxes();
-      showBoxes(".react");
-      break;
-    case "nodejs":
-      hideBoxes();
-      showBoxes(".node");
-      break;
     case "frontend":
       hideBoxes();
       showBoxes(".html, .javascript, .jquery, .react");
@@ -118,6 +92,10 @@ $(
     case "hot":
       hideBoxes();
       showBoxes(".temporary");
+      break;
+    case "view":
+      hideBoxes();
+      $(".view-more").css("display", "flex");
       break;
   }
 });

@@ -16,6 +16,7 @@ $markscript: "Marck Script", cursive;
   border: 0.1px solid $dark;
   color: inherit;
   border-bottom: none;
+  font-family: inherit;
 
   &::placeholder {
     color: $dark;

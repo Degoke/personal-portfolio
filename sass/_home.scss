@@ -16,10 +16,12 @@
     h1 {
       font-size: 80px;
       font-family: $megrim;
+      margin-bottom: 1rem;
     }
 
     p {
       font-size: 30px;
+      margin-bottom: 1rem;
     }
 
     .intro {
@@ -33,15 +35,20 @@
         align-items: center;
 
         .hire {
-          padding: 0.7rem 1rem;
+          padding: 0.5rem 1rem;
           border: none;
           background: $light;
           color: white;
           width: 30%;
-          height: 2.5rem;
+          height: 3rem;
           outline: none;
           margin: 0 0.5rem;
           border: 0.2px solid $dark;
+          font-family: inherit;
+          font-size: inherit;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           &:hover {
             background: white;
@@ -49,18 +56,28 @@
             transition: all 0.4s;
             cursor: pointer;
           }
+
+          &:focus {
+            background: white;
+            color: $dark;
+            transition: all 0.4s;
+          }
         }
 
         .cv {
-          padding: 0.7rem 1rem;
+          padding: 0.5rem 1rem;
           border: none;
           background: white;
           color: $dark;
           width: 30%;
-          height: 2.5rem;
+          height: 3rem;
           outline: none;
           margin: 0 0.5rem;
           border: 0.2px solid $dark;
+          font-family: inherit;
+          font-size: inherit;
+          align-items: center;
+          justify-content: center;
 
           &:hover {
             background: $light;
@@ -68,6 +85,12 @@
             transition: all 0.4s;
 
             cursor: pointer;
+          }
+
+          &:focus {
+            background: $light;
+            color: white;
+            transition: all 0.4s;
           }
         }
       }

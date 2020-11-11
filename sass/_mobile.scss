@@ -1,9 +1,10 @@
-@media all and(max-width: 600px) {
+@media all and (max-width: 480px) {
   body {
     font-size: 16px;
 
     .wrapper {
       .navbar {
+        padding: 0.5rem 0;
         .inner-nav {
           .navlist {
             display: none;
@@ -16,6 +17,18 @@
 
       .home {
         .innerhome {
+          flex-direction: column-reverse;
+
+          .intro {
+            .hire {
+              height: 2.7rem;
+            }
+
+            .cv {
+              height: 2.7rem;
+            }
+          }
+
           h1 {
             font-size: 70px;
           }
@@ -23,6 +36,7 @@
       }
 
       .about {
+        line-height: 1.5rem;
         .hi {
           width: 90%;
         }
@@ -30,8 +44,8 @@
         .lower-about {
           width: 90%;
 
-          .skill{
-            .skillboxes{
+          .skill {
+            .skillboxes {
               grid-template-columns: 1fr 1fr 1fr;
             }
           }
@@ -40,6 +54,12 @@
 
       .works {
         .projects {
+          .laptop-list {
+            flex-wrap: wrap;
+            button {
+              margin-bottom: 0.5rem;
+            }
+          }
           .workboxes {
             grid-template-columns: 1fr;
           }
@@ -48,11 +68,18 @@
 
       .contact {
         width: 90%;
+        line-height: 1.5rem;
+        .inner-contact {
+          .form {
+            #submit {
+              height: 2.7rem;
+            }
+          }
+        }
 
-       p {
+        p {
           width: 100%;
         }
-        
       }
     }
   }

@@ -3,19 +3,30 @@
   color: white;
   background: $dark;
   padding: 0.5rem 0;
+  font-size: 0.7em;
 
   p {
     margin-top: 0.5rem;
   }
 
-  .icon {
+  a {
     background-color: $dark;
     color: white;
     margin: 0 0.5rem;
+    font-size: 1.2em;
 
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.4);
       transition: all 0.4s;
+    }
+
+    &:focus {
+      outline: none;
+
+      i {
+        transform: scale(1.4);
+        transition: all 0.4s;
+      }
     }
   }
 }

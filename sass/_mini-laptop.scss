@@ -1,4 +1,4 @@
-@media all and (max-width: 1000px) {
+@media all and (min-width: 769px) and (max-width: 1024px) {
   body {
     font-size: 18px;
 
@@ -7,7 +7,6 @@
         width: 90%;
         height: 70%;
 
-       
         h1 {
           font-size: 80px;
         }
@@ -29,15 +28,13 @@
             }
           }
         }
-
       }
     }
 
     .about {
       .hi {
-        width: 70%;
+        width: 60%;
         padding: 1rem;
-        
       }
 
       .lower-about {
@@ -49,7 +46,7 @@
           flex: 40%;
 
           .skillboxes {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
             img {
               width: 3rem;
@@ -66,7 +63,6 @@
 
     .works {
       .projects {
-
         .workboxes {
           grid-template-columns: 1fr 1fr 1fr;
         }

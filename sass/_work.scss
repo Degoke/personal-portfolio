@@ -8,39 +8,54 @@
     margin-bottom: 2rem;
   }
 
-  p {
-    margin-bottom: 0.5rem;
-  }
-
   .projects {
     .laptop-list {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: center;
       margin: auto;
       margin-bottom: 2rem;
-      width: 90%;
 
-      li {
-        padding: 0.5rem;
-        border-bottom: 2px solid $dark;
+      button {
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
         color: $dark;
+        background: white;
+        border: 1px solid $dark;
+        font-size: inherit;
+        font-family: inherit;
+        margin: 0 0.2rem;
+
+        i {
+          color: $dark;
+        }
+
+        &:focus {
+          outline: none;
+          color: white;
+          background: $light;
+        }
 
         &:hover {
-          color: $light;
-          border-bottom: 2px solid $light;
           cursor: pointer;
           transition: all 0.4s;
+          color: white;
+          background: $light;
+        }
+
+        &:hover i {
+          color: white;
+        }
+
+        &:focus i {
+          color: white;
         }
       }
 
       .active {
-        color: $light;
-        border-bottom: none;
+        color: white;
+        background: $light;
+        border: none;
       }
-    }
-
-    .mobile {
-      display: none;
     }
 
     .workboxes {
@@ -61,6 +76,23 @@
         flex-direction: column;
         justify-content: flex-end;
 
+        a:focus {
+          outline: none;
+        }
+
+        a:focus i {
+          color: $light;
+          outline: none;
+        }
+
+        &:focus {
+          box-shadow: 0px 6px 20px 0px rgba(59, 58, 82, 0.43);
+          transform: translateY(-0.5rem);
+          border-bottom: 10px solid $light;
+          transition: all 0.4s;
+          outline: none;
+        }
+
         &:hover {
           box-shadow: 0px 6px 20px 0px rgba(59, 58, 82, 0.43);
           transform: translateY(-0.5rem);
@@ -73,14 +105,24 @@
           transition: all 0.4s;
         }
 
+        &:focus .description .tail {
+          display: block;
+          transition: all 0.4s;
+        }
+
         &:hover .icons i {
           color: $light;
           transition: all 0.4s;
         }
 
+        &:focus .icons i {
+          color: $light;
+        }
+
         .icons {
           text-align: end;
           margin-bottom: 0.5rem;
+          font-size: 1.3em;
           i {
             margin: 0 0.5rem;
             color: $dark;
@@ -103,6 +145,35 @@
 
       .hit {
         display: flex;
+      }
+    }
+
+    .view-more {
+      width: 50%;
+      margin: auto;
+      display: none;
+      flex-direction: column;
+
+      a {
+        padding: 1rem;
+        background: $dark;
+        margin: 2rem 0;
+        color: white;
+
+        &:hover {
+          box-shadow: 0px 6px 20px 0px rgba(59, 58, 82, 0.43);
+          transform: translateY(-0.5rem);
+          border-bottom: 10px solid white;
+          transition: all 0.4s;
+        }
+
+        &:focus {
+          box-shadow: 0px 6px 20px 0px rgba(59, 58, 82, 0.43);
+          transform: translateY(-0.5rem);
+          border-bottom: 10px solid white;
+          transition: all 0.4s;
+          outline: none;
+        }
       }
     }
   }

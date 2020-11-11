@@ -13,6 +13,10 @@ body {
   color: $dark;
   font-family: $roboto;
 
+  textarea {
+    resize: none;
+  }
+
   img {
     width: 100%;
     height: 100%;
@@ -36,9 +40,10 @@ body {
       width: 100%;
       display: none;
       text-align: center;
-      top: 3rem;
+      top: 2.5rem;
       right: 0;
       position: fixed;
+      font-size: 0.8em;
 
       ul {
         li {
@@ -71,6 +76,6 @@ body {
 @import "work";
 @import "contact";
 @import "footer";
-@import "mini-laptop";
-@import "tablet";
 @import "mobile";
+@import "tablet";
+@import "mini-laptop";
