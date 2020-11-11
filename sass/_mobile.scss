@@ -29,6 +29,12 @@
 
         .lower-about {
           width: 90%;
+
+          .skill{
+            .skillboxes{
+              grid-template-columns: 1fr 1fr 1fr;
+            }
+          }
         }
       }
 
