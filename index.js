@@ -104,6 +104,6 @@ $(".hire").click(function () {
   window.location = "#contact";
 });
 
-/*$('.cv').click(function(){
-  window.open('files/test.docx')
-})*/
+$('.cv').click(function(){
+  window.open('files/Degoke-resume.pdf')
+})
