@@ -105,5 +105,5 @@ $(".hire").click(function () {
 });
 
 $('.cv').click(function(){
-  window.open('files/Degoke-resume.pdf')
+  window.open('files/Adegoke-Adewoye.pdf')
 })
